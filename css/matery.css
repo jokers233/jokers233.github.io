@@ -2024,7 +2024,7 @@ p.search-result-summary{
     /* fix the problem of hidden failure */
     margin-top: 0.4em;
     /* bg color = bg color under block */
-    background: white;
+    background: black;
 }
 
 /*二级菜单*/
