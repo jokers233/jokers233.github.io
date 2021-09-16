@@ -18,10 +18,10 @@
     
     <entry>
       <title></title>
-      <link href="/2021/09/16/xin-jian-wen-ben-wen-dang/"/>
-      <url>/2021/09/16/xin-jian-wen-ben-wen-dang/</url>
+      <link href="/2021/09/16/hexo-bu-shu-wang-zhan-yu-dao-de-yi-xie-wen-ti/"/>
+      <url>/2021/09/16/hexo-bu-shu-wang-zhan-yu-dao-de-yi-xie-wen-ti/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>#hexo部署网站遇到的一些问题<br>##1.绝对不要在主题目录里使用hexo g或hexo d,容易崩<br>##2.当使用hexo g(d)更新内容时，出现了fatal: unable to access ‘<a href="https://github.com/.......&#39;">https://github.com/.......&#39;</a>: OpenSSL SSL_read: Connection was reset, errno 10054的错误<br>产生原因：一般是这是因为服务器的SSL证书没有经过第三方机构的签署，所以才报错，参考网上解决办法：解除ssl验证后，再次git即可。<br>即使用<strong>git config –global http.sslVerify “false”</strong></p>]]></content>
       
       
       
