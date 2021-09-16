@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>用python实现traceroute</title>
+      <link href="/2021/09/16/yong-python-shi-xian-traceroute/"/>
+      <url>/2021/09/16/yong-python-shi-xian-traceroute/</url>
+      
+        <content type="html"><![CDATA[<p>TraceRoute程序的基本原理是：<br>当路由器收到一份IP数据报，如果该报文的TTL字段是1，则意味着它在网路中的生存周期已经消耗殆尽，本路由处理后还未到达目的主机的话，需要将该数据报丢弃，并给信源主机发送一份ICMP超时报文（包含该中间路由器的地址）。<br>这意味着：通过发送一份TTL字段为n的IP数据报给目的主机，就得到了该路径中的第n个路由器的IP地址。<br>那么我们使IP数据报的TTL字段值从1开始依次递增，就可以获得所有中间路由的ip地址。<br>当IP数据报到达目的主机时，由于已经到达目的主机，因此不会再发送ICMP超时报文了，而是ICMP应答报文。<br>通过区分收到的ICMP报文是超时报文（type=11）还是应答报文（type=0），以判断程序应该何时结束。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2021/09/16/xin-jian-wen-ben-wen-dang/"/>
+      <url>/2021/09/16/xin-jian-wen-ben-wen-dang/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2021/09/12/hello-world/"/>
       <url>/2021/09/12/hello-world/</url>
