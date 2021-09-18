@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    86
+                    264
                 </div>
                 
 
@@ -491,6 +491,22 @@
 <p>命令：<code>sudo chmod 777 目录</code></p>
 <p>修改该目录权限为others，group，user都有读和可执行权限</p>
 <h2 id="2-Ubuntu报”有线连接未托管”"><a href="#2-Ubuntu报”有线连接未托管”" class="headerlink" title="2.Ubuntu报”有线连接未托管”"></a>2.Ubuntu报”有线连接未托管”</h2><p>可能有效的方法<a target="_blank" rel="noopener" href="https://blog.csdn.net/daerzei/article/details/85058130">点击进去</a></p>
+<h2 id="3-给Ubuntu上的pycharm设置快捷方式"><a href="#3-给Ubuntu上的pycharm设置快捷方式" class="headerlink" title="3.给Ubuntu上的pycharm设置快捷方式"></a>3.给Ubuntu上的pycharm设置快捷方式</h2><ul>
+<li>仅供参考，视你pycharm的相关安装路径而定</li>
+</ul>
+<p>1.<code>sudo vi /usr/share/applications/Pycharm.desktop</code><br>2.输入以下代码，在文件位置需要修改</p>
+<pre class="line-numbers language-none"><code class="language-none">[Desktop Entry]
+Type&#x3D;Application
+Name&#x3D;Pycharm
+GenericName&#x3D;Pycharm5
+Comment&#x3D;Pycharm5:The Python IDE 
+Exec&#x3D;&quot;&#x2F;home&#x2F;usr_name&#x2F;pycharm-2018.1.4&#x2F;bin&#x2F;pycharm.sh&quot; %f  #设置自己的pycham路径
+Icon&#x3D;&#x2F;home&#x2F;usr_name&#x2F;pycharm-2018.1.4&#x2F;bin&#x2F;pycharm.png #图标的位置
+Terminal&#x3D;false #打开程序时是否同时打开命令行，建议关闭
+Categories&#x3D;Pycharm #Categories这里的内容决定创建出的起动器在应用程序菜单中的位置<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<p>3.保存后退出，即可在搜索得到：</p>
 
                 
             </div>
@@ -869,7 +885,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">3.1k</span>
+                        class="white-color">3.3k</span>
             
             
             
