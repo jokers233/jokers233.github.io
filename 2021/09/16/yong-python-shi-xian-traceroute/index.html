@@ -493,11 +493,11 @@
             <div id="articleContent">
                 <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><p>本次用python实现traceroute，主要用到了socket,struct,select,还需要对ICMP报文有足够的了解，以及校验和算法的实现。</p>
 <h1 id="2-ICMP协议"><a href="#2-ICMP协议" class="headerlink" title="2.ICMP协议"></a>2.ICMP协议</h1><p>TraceRoute程序的实现一般可基于ICMP和UDP两种协议来实现，这里我采用的是前者。</p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>ICMP（Internet Control Message Protocol），中文译作网际控制报文协议，它允许主机或路由器报告差错情况和提供有关异常情况的报告，其常用功能有：确认IP数据报是否成功送达目标地址、通知在发送过程中IP数据报被废弃的原因，改善网络设置等。<br>ICMP报文虽封装在IP数据报中，但它并不属于更高层协议，反而仍属于网络层协议。下面是网络层各协议的层次分布情况，其上下关系说明了协议之间的依赖关系（上面的高层协议依赖于下面的低层协议），比如说IP协议就依赖于ARP协议的地址解析功能，ICMP和IGMP协议就依赖于IP协议的交付功能。<br><img src="https://i.loli.net/2021/09/18/WOg8MC7Rq2DeApw.jpg" alt="layer.jpg"></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>ICMP（Internet Control Message Protocol），中文译作网际控制报文协议，它允许主机或路由器报告差错情况和提供有关异常情况的报告，其常用功能有：确认IP数据报是否成功送达目标地址、通知在发送过程中IP数据报被废弃的原因，改善网络设置等。<br>ICMP报文虽封装在IP数据报中，但它并不属于更高层协议，反而仍属于网络层协议。下面是网络层各协议的层次分布情况，其上下关系说明了协议之间的依赖关系（上面的高层协议依赖于下面的低层协议），比如说IP协议就依赖于ARP协议的地址解析功能，ICMP和IGMP协议就依赖于IP协议的交付功能。<br><img src="https://i.loli.net/2021/09/18/tTCO1Gf3WRboqAc.jpg" alt="ip层.jpg"></p>
 <p>报文格式<br>下图是ICMP报文的格式，简单介绍了各字段占用字节的大小，接下来还需要详细介绍一下各字段表示的意义：</p>
 <p>类型（type）：标识ICMP报文的类型。</p>
 <p>代码（code）：用于进一步区分某种类型中的某种情况。</p>
-<p>校验和（checksum）：用于保证ICMP报文的完整性和正确性。<br><img src="https://i.loli.net/2021/09/18/C4NZ1DvoRzgf3UJ.jpg" alt="package.jpg"></p>
+<p>校验和（checksum）：用于保证ICMP报文的完整性和正确性。<br><img src="https://i.loli.net/2021/09/18/WKkGioC1YI5Vgad.jpg" alt="ICMP.jpg"></p>
 <p>不同之处在于整个第二行的全部四个字节，其具体内容要根据ICMP报文类型的变化而具备不同意义：</p>
 <p>当报文类型为回送请求时， 前两个字节表示id（标识符），后两个字节表示sequence（序列号）。</p>
 <p>当报文类型为回送应答时，这四个字节会原封不动地返回源主机。</p>
