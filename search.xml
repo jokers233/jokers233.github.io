@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>在Ubuntu上遇到的一些问题</title>
+      <link href="/2021/09/19/zai-ubuntu-shang-yu-dao-de-yi-xie-wen-ti/"/>
+      <url>/2021/09/19/zai-ubuntu-shang-yu-dao-de-yi-xie-wen-ti/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-解决ubuntu-bash-cd-bin-Permission-denied问题"><a href="#1-解决ubuntu-bash-cd-bin-Permission-denied问题" class="headerlink" title="1.解决ubuntu -bash: cd: bin/: Permission denied问题"></a>1.解决ubuntu -bash: cd: bin/: Permission denied问题</h2><p>出现这个问题的原因是因为没有权限，修改一下目录的权限即可</p><p>命令：<code>sudo chmod 777 目录</code></p><p>修改该目录权限为others，group，user都有读和可执行权限</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ubuntu改成桥接模式的一些尝试</title>
       <link href="/2021/09/17/ubuntu-gai-cheng-qiao-jie-mo-shi-de-yi-xie-chang-shi/"/>
       <url>/2021/09/17/ubuntu-gai-cheng-qiao-jie-mo-shi-de-yi-xie-chang-shi/</url>
