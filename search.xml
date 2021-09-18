@@ -8,7 +8,7 @@
       <link href="/2021/09/19/zai-ubuntu-shang-yu-dao-de-yi-xie-wen-ti/"/>
       <url>/2021/09/19/zai-ubuntu-shang-yu-dao-de-yi-xie-wen-ti/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-解决ubuntu-bash-cd-bin-Permission-denied问题"><a href="#1-解决ubuntu-bash-cd-bin-Permission-denied问题" class="headerlink" title="1.解决ubuntu -bash: cd: bin/: Permission denied问题"></a>1.解决ubuntu -bash: cd: bin/: Permission denied问题</h2><p>出现这个问题的原因是因为没有权限，修改一下目录的权限即可</p><p>命令：<code>sudo chmod 777 目录</code></p><p>修改该目录权限为others，group，user都有读和可执行权限</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-解决ubuntu-bash-cd-bin-Permission-denied问题"><a href="#1-解决ubuntu-bash-cd-bin-Permission-denied问题" class="headerlink" title="1.解决ubuntu -bash: cd: bin/: Permission denied问题"></a>1.解决ubuntu -bash: cd: bin/: Permission denied问题</h2><p>出现这个问题的原因是因为没有权限，修改一下目录的权限即可</p><p>命令：<code>sudo chmod 777 目录</code></p><p>修改该目录权限为others，group，user都有读和可执行权限</p><h2 id="2-Ubuntu报”有线连接未托管”"><a href="#2-Ubuntu报”有线连接未托管”" class="headerlink" title="2.Ubuntu报”有线连接未托管”"></a>2.Ubuntu报”有线连接未托管”</h2><p>可能有效的方法<a href="https://blog.csdn.net/daerzei/article/details/85058130">点击进去</a></p>]]></content>
       
       
       
