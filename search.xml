@@ -12,6 +12,12 @@
       
       
       
+        <tags>
+            
+            <tag> ubuntu </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -21,9 +27,34 @@
       <link href="/2021/09/17/ubuntu-gai-cheng-qiao-jie-mo-shi-de-yi-xie-chang-shi/"/>
       <url>/2021/09/17/ubuntu-gai-cheng-qiao-jie-mo-shi-de-yi-xie-chang-shi/</url>
       
-        <content type="html"><![CDATA[<p>看到的一个感觉挺简洁的方法<a href="https://blog.csdn.net/weixin_42627397/article/details/110826285?utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-3.searchformbaiduhighlight&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-3.searchformbaiduhighlight">简便方法</a>.</p>]]></content>
+        <content type="html"><![CDATA[<p>看到的一个感觉挺简洁的方法，虽然对我没啥用。。。<a href="https://blog.csdn.net/weixin_42627397/article/details/110826285?utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-3.searchformbaiduhighlight&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-3.searchformbaiduhighlight">简便方法</a>.</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 桥接模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo部署网站遇到的一些问题</title>
+      <link href="/2021/09/16/hexo-bu-shu-wang-zhan-yu-dao-de-yi-xie-wen-ti/"/>
+      <url>/2021/09/16/hexo-bu-shu-wang-zhan-yu-dao-de-yi-xie-wen-ti/</url>
+      
+        <content type="html"><![CDATA[<h1 id="hexo部署网站遇到的一些问题"><a href="#hexo部署网站遇到的一些问题" class="headerlink" title="hexo部署网站遇到的一些问题"></a>hexo部署网站遇到的一些问题</h1><p>1.绝对不要在主题目录里使用hexo g或hexo d,容易崩<br>2.当使用hexo g(d)更新内容时，出现了fatal: unable to access ‘<a href="https://github.com/.......&#39;">https://github.com/.......&#39;</a>: OpenSSL SSL_read: Connection was reset, errno 10054的错误<br>产生原因：一般是这是因为服务器的SSL证书没有经过第三方机构的签署，所以才报错，参考网上解决办法：解除ssl验证后，再次git即可。<br>即使用<code>git config --global http.sslVerify &quot;false&quot;</code></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
@@ -43,19 +74,6 @@
             <tag> traceroute icmp python </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2021/09/16/hexo-bu-shu-wang-zhan-yu-dao-de-yi-xie-wen-ti/"/>
-      <url>/2021/09/16/hexo-bu-shu-wang-zhan-yu-dao-de-yi-xie-wen-ti/</url>
-      
-        <content type="html"><![CDATA[<h1 id="hexo部署网站遇到的一些问题"><a href="#hexo部署网站遇到的一些问题" class="headerlink" title="hexo部署网站遇到的一些问题"></a>hexo部署网站遇到的一些问题</h1><p>1.绝对不要在主题目录里使用hexo g或hexo d,容易崩<br>2.当使用hexo g(d)更新内容时，出现了fatal: unable to access ‘<a href="https://github.com/.......&#39;">https://github.com/.......&#39;</a>: OpenSSL SSL_read: Connection was reset, errno 10054的错误<br>产生原因：一般是这是因为服务器的SSL证书没有经过第三方机构的签署，所以才报错，参考网上解决办法：解除ssl验证后，再次git即可。<br>即使用<code>git config --global http.sslVerify &quot;false&quot;</code></p>]]></content>
-      
-      
       
     </entry>
     
