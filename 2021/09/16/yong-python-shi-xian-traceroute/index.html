@@ -454,7 +454,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-18
+                    2021-09-19
                 </div>
                 
 
@@ -493,8 +493,8 @@
             <div id="articleContent">
                 <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>本次用python实现traceroute，主要用到了socket,struct,select,还需要对ICMP报文有足够的了解，以及校验和算法的实现。</p>
 <h2 id="2-ICMP协议"><a href="#2-ICMP协议" class="headerlink" title="2.ICMP协议"></a>2.ICMP协议</h2><p>TraceRoute程序的实现一般可基于ICMP和UDP两种协议来实现，这里我采用的是前者。</p>
-<h2 id="2-1简介"><a href="#2-1简介" class="headerlink" title="2.1简介"></a>2.1简介</h2><p>ICMP（Internet Control Message Protocol），中文译作网际控制报文协议，它允许主机或路由器报告差错情况和提供有关异常情况的报告，其常用功能有：确认IP数据报是否成功送达目标地址、通知在发送过程中IP数据报被废弃的原因，改善网络设置等。<br>ICMP报文虽封装在IP数据报中，但它并不属于更高层协议，反而仍属于网络层协议。下面是网络层各协议的层次分布情况，其上下关系说明了协议之间的依赖关系（上面的高层协议依赖于下面的低层协议），比如说IP协议就依赖于ARP协议的地址解析功能，ICMP和IGMP协议就依赖于IP协议的交付功能。<br><img src="https://i.loli.net/2021/09/18/tTCO1Gf3WRboqAc.jpg" alt="ip层.jpg"></p>
-<h2 id="2-2报文格式"><a href="#2-2报文格式" class="headerlink" title="2.2报文格式"></a>2.2报文格式</h2><p>下图是ICMP报文的格式，简单介绍了各字段占用字节的大小，接下来还需要详细介绍一下各字段表示的意义：</p>
+<h3 id="2-1简介"><a href="#2-1简介" class="headerlink" title="2.1简介"></a>2.1简介</h3><p>ICMP（Internet Control Message Protocol），中文译作网际控制报文协议，它允许主机或路由器报告差错情况和提供有关异常情况的报告，其常用功能有：确认IP数据报是否成功送达目标地址、通知在发送过程中IP数据报被废弃的原因，改善网络设置等。<br>ICMP报文虽封装在IP数据报中，但它并不属于更高层协议，反而仍属于网络层协议。下面是网络层各协议的层次分布情况，其上下关系说明了协议之间的依赖关系（上面的高层协议依赖于下面的低层协议），比如说IP协议就依赖于ARP协议的地址解析功能，ICMP和IGMP协议就依赖于IP协议的交付功能。<br><img src="https://i.loli.net/2021/09/18/tTCO1Gf3WRboqAc.jpg" alt="ip层.jpg"></p>
+<h3 id="2-2报文格式"><a href="#2-2报文格式" class="headerlink" title="2.2报文格式"></a>2.2报文格式</h3><p>下图是ICMP报文的格式，简单介绍了各字段占用字节的大小，接下来还需要详细介绍一下各字段表示的意义：</p>
 <p>类型（type）：标识ICMP报文的类型。</p>
 <p>代码（code）：用于进一步区分某种类型中的某种情况。</p>
 <p>校验和（checksum）：用于保证ICMP报文的完整性和正确性。<br><img src="https://i.loli.net/2021/09/18/WKkGioC1YI5Vgad.jpg" alt="ICMP.jpg"></p>
@@ -506,7 +506,7 @@
 <ul>
 <li>注：ICMP报文需要计算校验和是由于：IP数据报计算的校验和只针对IP数据报首部有效，并不能确保数据部分一定进行无差错传输，类似地，TCP和UDP也需要自行计算校验和以确保数据部分的无差错传输。</li>
 </ul>
-<h2 id="2-3报文分类"><a href="#2-3报文分类" class="headerlink" title="2.3报文分类"></a>2.3报文分类</h2><p>ICMP报文主要分为两大类 - 差错报告报文和网络控制报文：差错报告报文由于责任重大，规定其数据区必须包括发生差错的IP数据报首部以及数据区的至少64比特，因为这些信息更够为源端采取差错处理措施提供依据。</p>
+<h3 id="2-3报文分类"><a href="#2-3报文分类" class="headerlink" title="2.3报文分类"></a>2.3报文分类</h3><p>ICMP报文主要分为两大类 - 差错报告报文和网络控制报文：差错报告报文由于责任重大，规定其数据区必须包括发生差错的IP数据报首部以及数据区的至少64比特，因为这些信息更够为源端采取差错处理措施提供依据。</p>
 <p>网络控制报文又可分为两类 - 请求/应答报文和通知报文：其中请求/应答报文总是成对出现的，一个负责请求，一个负责应答，而通知报文顾名思义，则只负责建立一种单向的通知机制。</p>
 <p>ICMP报文种类繁多，协议设计者按照层次将其划分为type和code两层结构，其中type字段表明ICMP报文的类型，code字段则提供了有关报文类型更为详细的信息，下面是不同type值所代表的意义：<br><img src="https://i.loli.net/2021/09/18/ihaJeBzLCmKwRO3.jpg" alt="ICMP报文类型.jpg"></p>
 <p>确定了type之后，还需要确定code：如果当前type已经无需再进行细分的话，则置为 0 即可；但常见的诸如type为3、5、11、12 等的报文是还需细分的，具体的划分情况请看下表：</p>
@@ -1138,13 +1138,13 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2021</span>
             
-            <span id="year">2019</span>
+            <span id="year">2021</span>
             <a href="/about" target="_blank">Mr Fan</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
@@ -1172,6 +1172,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2021";
+                        var startMonth = "9";
+                        var startDate = "15";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             
