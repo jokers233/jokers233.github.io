@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>数学竞赛前的挣扎</title>
+      <link href="/2021/09/20/shu-xue-jing-sai-qian-de-zheng-zha/"/>
+      <url>/2021/09/20/shu-xue-jing-sai-qian-de-zheng-zha/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-有理函数不定积分"><a href="#1-有理函数不定积分" class="headerlink" title="1.有理函数不定积分"></a>1.有理函数不定积分</h2><ul><li>注:有理函数从宏观上可以分为真分式和假分式。而任意一个假分式可以通过多项式除法变为多项式与真分式。因此，本质上就是求真分式的积分。</li></ul><h3 id="1-1真分式积分的固定套路"><a href="#1-1真分式积分的固定套路" class="headerlink" title="1.1真分式积分的固定套路"></a>1.1真分式积分的固定套路</h3><p>真分式积分的固定套路:</p><blockquote><p>1.将真分式的分母进行因式分解（直到无法分解为止）<br>2.然后进行裂项<br><img src="https://i.loli.net/2021/09/20/iEwATkFoufnSOrl.jpg" alt="Screenshot_20210920_234040.jpg"></p></blockquote><blockquote><p>3.将裂项后的所有项进行通分，依据通分后的分子与原来式子的分子相同从而求得各个待定系数<br>4.最终真分式就分为了多个式子之和了</p></blockquote><p><img src="https://i.loli.net/2021/09/20/CFbY72XSEyLGOxK.jpg" alt="Screenshot_20210920_234002.jpg"></p><h3 id="1-2三种积分的解题模板"><a href="#1-2三种积分的解题模板" class="headerlink" title="1.2三种积分的解题模板"></a>1.2三种积分的解题模板</h3><p>因此，求有理积分，一般也就是求上面三种积分。只要解决了上面三种的积分问题，大部分有理积分也就能求出来了。</p><ul><li>第一种积分过于简单，就不叙述了。</li></ul><h4 id="1-2-1第二种积分，例题"><a href="#1-2-1第二种积分，例题" class="headerlink" title="1.2.1第二种积分，例题:"></a>1.2.1第二种积分，例题:</h4><p><img src="https://i.loli.net/2021/09/20/j5yC2XhHgueG3fP.jpg" alt="Screenshot_20210920_235205.jpg"></p><h4 id="1-2-2第三种积分"><a href="#1-2-2第三种积分" class="headerlink" title="1.2.2第三种积分"></a>1.2.2第三种积分</h4><p>铺垫1:<br><img src="https://i.loli.net/2021/09/20/JkS2Dp9dH3jmYu1.jpg" alt="Screenshot_20210920_235600.jpg"></p><ul><li>重点是分部积分法降次</li></ul><p>铺垫2:<br><img src="https://i.loli.net/2021/09/21/5rolPxktUd2W74f.jpg" alt="Screenshot_20210921_000941.jpg"></p><p>在铺垫2最后需要铺垫1的解法。而第三种积分最终可以化成铺垫21形式（从而通过铺垫1解法最终求得结果）</p><p>至此，三种积分的解题模板都已大功告成。</p><h3 id="1-3有理函数求积分的常见例题"><a href="#1-3有理函数求积分的常见例题" class="headerlink" title="1.3有理函数求积分的常见例题"></a>1.3有理函数求积分的常见例题</h3>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>gnome-terminal使用</title>
       <link href="/2021/09/20/gnome-terminal-shi-yong/"/>
       <url>/2021/09/20/gnome-terminal-shi-yong/</url>
