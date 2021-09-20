@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="在Ubuntu上遇到的一些问题, Fan jokes">
+    <meta name="keywords" content="github问题集, Fan jokes">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>在Ubuntu上遇到的一些问题 | Fan jokes</title>
+    <title>github问题集 | Fan jokes</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">在Ubuntu上遇到的一些问题</h1>
+                    <h1 class="description center-align post-title">github问题集</h1>
                 </div>
             </div>
         </div>
@@ -429,13 +429,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/ubuntu/">
-                                <span class="chip bg-color">ubuntu</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -447,28 +443,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-19
+                    2021-09-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-19
+                    2021-09-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    673
+                    0
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -491,37 +487,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-解决ubuntu-bash-cd-bin-Permission-denied问题"><a href="#1-解决ubuntu-bash-cd-bin-Permission-denied问题" class="headerlink" title="1.解决ubuntu -bash: cd: bin/: Permission denied问题"></a>1.解决ubuntu -bash: cd: bin/: Permission denied问题</h2><p>出现这个问题的原因是因为没有权限，修改一下目录的权限即可</p>
-<p>命令：<code>sudo chmod 777 目录</code></p>
-<p>修改该目录权限为others，group，user都有读和可执行权限</p>
-<h2 id="2-Ubuntu报”有线连接未托管”"><a href="#2-Ubuntu报”有线连接未托管”" class="headerlink" title="2.Ubuntu报”有线连接未托管”"></a>2.Ubuntu报”有线连接未托管”</h2><p>可能有效的方法<a target="_blank" rel="noopener" href="https://blog.csdn.net/daerzei/article/details/85058130">点击进去</a></p>
-<h2 id="3-给Ubuntu上的pycharm设置快捷方式"><a href="#3-给Ubuntu上的pycharm设置快捷方式" class="headerlink" title="3.给Ubuntu上的pycharm设置快捷方式"></a>3.给Ubuntu上的pycharm设置快捷方式</h2><ul>
-<li>仅供参考，视你pycharm的相关安装路径而定</li>
-</ul>
-<p>1.<code>sudo vi /usr/share/applications/Pycharm.desktop</code><br>2.输入以下代码，在文件位置需要修改</p>
-<pre class="line-numbers language-none"><code class="language-none">[Desktop Entry]
-Type&#x3D;Application
-Name&#x3D;Pycharm
-GenericName&#x3D;Pycharm5
-Comment&#x3D;Pycharm5:The Python IDE 
-Exec&#x3D;&quot;&#x2F;home&#x2F;usr_name&#x2F;pycharm-2018.1.4&#x2F;bin&#x2F;pycharm.sh&quot; %f  #设置自己的pycham路径
-Icon&#x3D;&#x2F;home&#x2F;usr_name&#x2F;pycharm-2018.1.4&#x2F;bin&#x2F;pycharm.png #图标的位置
-Terminal&#x3D;false #打开程序时是否同时打开命令行，建议关闭
-Categories&#x3D;Pycharm #Categories这里的内容决定创建出的起动器在应用程序菜单中的位置<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-<p>3.保存后退出，即可在搜索得到</p>
-<ul>
-<li>注：如果下载的是pycharm专业版，可直接在pycharm里面点击<strong>Tools</strong>,再点击<strong>Creat Desktop Entry</strong>即可(如果想创建root权限的快捷方式，得从命令行用sudo方式打开pycharm)</li>
-</ul>
-<h2 id="4-ping在linux上的不同"><a href="#4-ping在linux上的不同" class="headerlink" title="4.ping在linux上的不同"></a>4.ping在linux上的不同</h2><p>linux下的ping和windows下的ping稍有区别,linux下ping不会自动终止,需要按ctrl+c终止或者用参数-c指定要求完成的回应次数.下面是ping命令的一些选项：</p>
-<blockquote>
-<p>-d：使用Socket的SO_DEBUG功能；<br>-c&lt;完成次数&gt;：设置完成要求回应的次数；<br>-f：极限检测；<br>-i&lt;间隔秒数&gt;：指定收发信息的间隔时间；<br>-I&lt;网络界面&gt;：使用指定的网络界面送出数据包；<br>-l&lt;前置载入&gt;：设置在送出要求信息之前，先行发出的数据包；<br>-n：只输出数值；<br>-p&lt;范本样式&gt;：设置填满数据包的范本样式；<br>-q：不显示指令执行过程，开头和结尾的相关信息除外；<br>-r：忽略普通的Routing Table，直接将数据包送到远端主机上；<br>-R：记录路由过程；<br>-s&lt;数据包大小&gt;：设置数据包的大小；<br>-t&lt;存活数值&gt;：设置存活数值TTL的大小；<br>-v：详细显示指令的执行过程。</p>
-</blockquote>
-<h2 id="5-ubuntu突然不能上网"><a href="#5-ubuntu突然不能上网" class="headerlink" title="5.ubuntu突然不能上网"></a>5.ubuntu突然不能上网</h2><p>亲测有效<a target="_blank" rel="noopener" href="https://blog.csdn.net/nicker08/article/details/103093638">点击进去</a><br>        <a target="_blank" rel="noopener" href="https://www.pianshen.com/article/81971052661/">点击进去2</a> </p>
-<h2 id="6-apt-get-提示-无法解析域名“cn-archive-ubuntu-com”-的解决"><a href="#6-apt-get-提示-无法解析域名“cn-archive-ubuntu-com”-的解决" class="headerlink" title="6.apt-get 提示 无法解析域名“cn.archive.ubuntu.com” 的解决"></a>6.apt-get 提示 无法解析域名“cn.archive.ubuntu.com” 的解决</h2><p>忘了是在啥情况下遇到的这个问题了。。。<a target="_blank" rel="noopener" href="https://blog.csdn.net/wuzhidefeng/article/details/80540188">点击进去</a><br>                                    <a target="_blank" rel="noopener" href="https://www.chenhuojun.com/2020/08/02/ubuntu18-04-sudo-apt-update%E6%97%A0%E6%B3%95%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">点击进去2</a></p>
-<h2 id="7-Failed-to-restart-network-service-Unit-network-service-not-found"><a href="#7-Failed-to-restart-network-service-Unit-network-service-not-found" class="headerlink" title="7.Failed to restart network.service: Unit network.service not found."></a>7.Failed to restart network.service: Unit network.service not found.</h2><p>解决方案<a target="_blank" rel="noopener" href="https://www.cnblogs.com/leozhanggg/p/11772251.html">点击进去</a></p>
-
+                
                 
             </div>
             <hr/>
@@ -547,7 +513,7 @@ Categories&#x3D;Pycharm #Categories这里的内容决定创建出的起动器在
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jokers233.github.io/2021/09/19/zai-ubuntu-shang-yu-dao-de-yi-xie-wen-ti/">https://jokers233.github.io/2021/09/19/zai-ubuntu-shang-yu-dao-de-yi-xie-wen-ti/</a>
+                    <a href="https://jokers233.github.io/2021/09/20/github-wen-ti-ji/">https://jokers233.github.io/2021/09/20/github-wen-ti-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -584,11 +550,7 @@ Categories&#x3D;Pycharm #Categories这里的内容决定创建出的起动器在
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/ubuntu/">
-                                    <span class="chip bg-color">ubuntu</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -632,9 +594,10 @@ Categories&#x3D;Pycharm #Categories这里的内容决定创建出的起动器在
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/09/20/github-wen-ti-ji/">
                     <div class="card-image">
@@ -652,9 +615,9 @@ Categories&#x3D;Pycharm #Categories这里的内容决定创建出的起动器在
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -663,6 +626,7 @@ Categories&#x3D;Pycharm #Categories这里的内容决定创建出的起动器在
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -673,13 +637,13 @@ Categories&#x3D;Pycharm #Categories这里的内容决定创建出的起动器在
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/17/ubuntu-gai-cheng-qiao-jie-mo-shi-de-yi-xie-chang-shi/">
+                <a href="/2021/09/19/zai-ubuntu-shang-yu-dao-de-yi-xie-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="ubuntu改成桥接模式的一些尝试">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="在Ubuntu上遇到的一些问题">
                         
-                        <span class="card-title">ubuntu改成桥接模式的一些尝试</span>
+                        <span class="card-title">在Ubuntu上遇到的一些问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -690,7 +654,7 @@ Categories&#x3D;Pycharm #Categories这里的内容决定创建出的起动器在
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-19
                             </span>
                         <span class="publish-author">
                             
@@ -703,8 +667,8 @@ Categories&#x3D;Pycharm #Categories这里的内容决定创建出的起动器在
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">桥接模式</span>
+                    <a href="/tags/ubuntu/">
+                        <span class="chip bg-color">ubuntu</span>
                     </a>
                     
                 </div>
