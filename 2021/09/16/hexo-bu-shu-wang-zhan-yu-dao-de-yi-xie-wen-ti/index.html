@@ -454,14 +454,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-19
+                    2021-09-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    129
+                    146
                 </div>
                 
 
@@ -491,7 +491,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="hexo部署网站遇到的一些问题"><a href="#hexo部署网站遇到的一些问题" class="headerlink" title="hexo部署网站遇到的一些问题"></a>hexo部署网站遇到的一些问题</h1><p>1.绝对不要在主题目录里使用hexo g或hexo d,容易崩<br>2.当使用hexo g(d)更新内容时，出现了fatal: unable to access ‘<a target="_blank" rel="noopener" href="https://github.com/.......&#39;">https://github.com/.......&#39;</a>: OpenSSL SSL_read: Connection was reset, errno 10054的错误<br>产生原因：一般是这是因为服务器的SSL证书没有经过第三方机构的签署，所以才报错，参考网上解决办法：解除ssl验证后，再次git即可。<br>即使用<code>git config --global http.sslVerify &quot;false&quot;</code></p>
+                <h1 id="hexo部署网站遇到的一些问题"><a href="#hexo部署网站遇到的一些问题" class="headerlink" title="hexo部署网站遇到的一些问题"></a>hexo部署网站遇到的一些问题</h1><p>1.绝对不要在主题目录里使用hexo g或hexo d,容易崩</p>
+<p>2.当使用hexo g(d)更新内容时，出现了fatal: unable to access ‘<a target="_blank" rel="noopener" href="https://github.com/.......&#39;">https://github.com/.......&#39;</a>: OpenSSL SSL_read: Connection was reset, errno 10054的错误<br>产生原因：一般是这是因为服务器的SSL证书没有经过第三方机构的签署，所以才报错，参考网上解决办法：解除ssl验证后，再次git即可。<br>即使用<code>git config --global http.sslVerify &quot;false&quot;</code></p>
+<p><strong>3.FATAL can not read a block mapping entry解决办法</strong><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/feinifi/article/details/64204687">点击进入</a></p>
 
                 
             </div>
