@@ -8,7 +8,7 @@
       <link href="/2021/09/20/github-wen-ti-ji/"/>
       <url>/2021/09/20/github-wen-ti-ji/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="1-github下载别人仓库里的代码时出错"><a href="#1-github下载别人仓库里的代码时出错" class="headerlink" title="1.github下载别人仓库里的代码时出错"></a>1.github下载别人仓库里的代码时出错</h2><p><code>fatal: unable to access &#39;https://github.com/*******/*****.git/&#39;: OpenSSL SSL_read: Connection was reset, errno 10054</code></p><ul><li>解决方法:将https改为git</li></ul><h2 id="2-因为下载代码时将https改为了git而造成的后果"><a href="#2-因为下载代码时将https改为了git而造成的后果" class="headerlink" title="2.因为下载代码时将https改为了git而造成的后果"></a>2.因为下载代码时将https改为了git而造成的后果</h2><p><strong>fatal: remote error: You can’t push to git</strong></p><p>解决方法，应该有效<a href="https://blog.csdn.net/u011733020/article/details/52367128">点击进入</a></p>]]></content>
       
       
       
