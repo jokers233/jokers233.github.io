@@ -459,14 +459,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.5k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    9 分
                 </div>
                 
 
@@ -529,7 +529,10 @@
 <p>3.同时，可能存在主机名可以被解释为多个地址的情况.例如:<strong>sur01.tacoma.wa.seattle.comcast.net</strong> 指的地址是<strong>Seattle, WA</strong>, 还是<strong>Tacoma, WA</strong>,甚至是 <strong>Sumner, WA</strong> .</p>
 </blockquote>
 <h2 id="4-本篇论文的一些贡献"><a href="#4-本篇论文的一些贡献" class="headerlink" title="4.本篇论文的一些贡献"></a>4.本篇论文的一些贡献</h2><h3 id="1-研究了2014-2018年间的反向DNS主机名的变化"><a href="#1-研究了2014-2018年间的反向DNS主机名的变化" class="headerlink" title="(1)研究了2014-2018年间的反向DNS主机名的变化"></a>(1)研究了2014-2018年间的反向DNS主机名的变化</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5XFz1H"><img src="https://z3.ax1x.com/2021/10/29/5XFz1H.png" alt="5XFz1H.png"></a></p>
-<h3 id="2-使用机器学习-二项分类法-来从主机名中提取地理位置"><a href="#2-使用机器学习-二项分类法-来从主机名中提取地理位置" class="headerlink" title="(2)使用机器学习(二项分类法)来从主机名中提取地理位置"></a>(2)使用机器学习(二项分类法)来从主机名中提取地理位置</h3><h3 id="3-与最高水准的三个基准模型相比表现得更好-同时发现了影响这些模型的表现的问题-并且还与两个商业ip地理位置数据库进行了对比，结果表明本论文提出的方法具有竞争性还能与他们互补，提高他们的准确率"><a href="#3-与最高水准的三个基准模型相比表现得更好-同时发现了影响这些模型的表现的问题-并且还与两个商业ip地理位置数据库进行了对比，结果表明本论文提出的方法具有竞争性还能与他们互补，提高他们的准确率" class="headerlink" title="(3)与最高水准的三个基准模型相比表现得更好.同时发现了影响这些模型的表现的问题.并且还与两个商业ip地理位置数据库进行了对比，结果表明本论文提出的方法具有竞争性还能与他们互补，提高他们的准确率."></a>(3)与最高水准的三个基准模型相比表现得更好.同时发现了影响这些模型的表现的问题.并且还与两个商业ip地理位置数据库进行了对比，结果表明本论文提出的方法具有竞争性还能与他们互补，提高他们的准确率.</h3><h3 id="（4）为了让学术界能够更好地复现，对代码进行了开源点击这里"><a href="#（4）为了让学术界能够更好地复现，对代码进行了开源点击这里" class="headerlink" title="（4）为了让学术界能够更好地复现，对代码进行了开源点击这里"></a>（4）为了让学术界能够更好地复现，对代码进行了开源<a href="github.com/microsoft/ReverseDNSGeolocation">点击这里</a></h3><h2 id="5-Reverse-DNS"><a href="#5-Reverse-DNS" class="headerlink" title="5.Reverse DNS"></a>5.Reverse DNS</h2><ol>
+<blockquote>
+<p>还发现了64.8%的主机名（不是空的）五年里没有变化,这表明大量主机名是比较稳定的.<br>总之,11.5亿ip地址可以通过反向查询得到主机名，而且他们中的许多还包含具体的城市和机场代码。</p>
+</blockquote>
+<h3 id="2-使用机器学习-二项分类法-来分类根据主机名得到的地理位置候选者，并给符合要求的地理位置一个置信度分数"><a href="#2-使用机器学习-二项分类法-来分类根据主机名得到的地理位置候选者，并给符合要求的地理位置一个置信度分数" class="headerlink" title="(2)使用机器学习(二项分类法)来分类根据主机名得到的地理位置候选者，并给符合要求的地理位置一个置信度分数."></a>(2)使用机器学习(二项分类法)来分类根据主机名得到的地理位置候选者，并给符合要求的地理位置一个置信度分数.</h3><h3 id="3-与最高水准的三个基准模型相比表现得更好-同时发现了影响这些模型的表现的问题-并且还与两个商业ip地理位置数据库进行了对比，结果表明本论文提出的方法具有竞争性还能与他们互补，提高他们的准确率"><a href="#3-与最高水准的三个基准模型相比表现得更好-同时发现了影响这些模型的表现的问题-并且还与两个商业ip地理位置数据库进行了对比，结果表明本论文提出的方法具有竞争性还能与他们互补，提高他们的准确率" class="headerlink" title="(3)与最高水准的三个基准模型相比表现得更好.同时发现了影响这些模型的表现的问题.并且还与两个商业ip地理位置数据库进行了对比，结果表明本论文提出的方法具有竞争性还能与他们互补，提高他们的准确率."></a>(3)与最高水准的三个基准模型相比表现得更好.同时发现了影响这些模型的表现的问题.并且还与两个商业ip地理位置数据库进行了对比，结果表明本论文提出的方法具有竞争性还能与他们互补，提高他们的准确率.</h3><h3 id="（4）为了让学术界能够更好地复现，对代码进行了开源点击这里"><a href="#（4）为了让学术界能够更好地复现，对代码进行了开源点击这里" class="headerlink" title="（4）为了让学术界能够更好地复现，对代码进行了开源点击这里"></a>（4）为了让学术界能够更好地复现，对代码进行了开源<a href="github.com/microsoft/ReverseDNSGeolocation">点击这里</a></h3><h2 id="5-Reverse-DNS"><a href="#5-Reverse-DNS" class="headerlink" title="5.Reverse DNS"></a>5.Reverse DNS</h2><ol>
 <li>正向DNS查找将有效的主机名比如<strong><a target="_blank" rel="noopener" href="http://www.bing.com/">www.bing.com</a></strong>转换成应的ip地址集（可能有多个ip对应同一个域名）.反向DNS查找则相反.(但不是可逆的，不完全相反).反向DNS查找一般返回零个或一个主机名（规范主机名:底层网络基础设施），而正向DNS查找的域名一般用于命名网站或其他网络服务.（可参考<code>RFC1034</code>）</li>
 <li> 反向DNS查找的实现是通过<code>PTR</code>和<code> CNAME</code>记录来实现的.</li>
 </ol>
@@ -546,7 +549,10 @@
 <h2 id="PTR介绍"><a href="#PTR介绍" class="headerlink" title="PTR介绍"></a>PTR介绍</h2><blockquote>
 <p>PTR记录(Pointer Record)(互联网标准文件RFC1035)，是电子邮件系统中的邮件交换记录的一种；另一种邮件交换记录是A记录（在IPv4协议中）或AAAA记录（在IPv6协议中）.PTR记录常被用于反向地址解析。</p>
 </blockquote>
-<h2 id="CNAME介绍"><a href="#CNAME介绍" class="headerlink" title="CNAME介绍"></a>CNAME介绍</h2><blockquote>
+<blockquote>
+<p>假设您的网络地址范围是192.168.0.1-192.168.0.255，和192.168.0.1/24这个C段网络。那么对应的IP地址网络反解Zone文件格式为0.168.192.in-addr.arpa。当您在Zone文件0.168.192.in-addr.arpa内添加主机记录为1的PTR记录指向<a target="_blank" rel="noopener" href="http://www.example.com时/">www.example.com时</a> IP地址192.168.0.1的反解即是<a target="_blank" rel="noopener" href="http://www.example.com/">www.example.com</a></p>
+</blockquote>
+<h2 id="CNAME介绍（RFC2317）"><a href="#CNAME介绍（RFC2317）" class="headerlink" title="CNAME介绍（RFC2317）"></a>CNAME介绍（RFC2317）</h2><blockquote>
 <p>真实名称记录(Canonical Name Record),是域名系统（DNS）的一种记录。CNAME记录用于将一个域名（同名）映射到另一个域名（真实名称），域名解析服务器遇到CNAME记录会以映射到的目标重新开始查询。这对于需要在同一个IP地址上运行多个服务的情况来说非常方便。若要同时运行文件传输服务和Web服务 则可以把ftp.example.com和<a target="_blank" rel="noopener" href="http://www.example.com都指向dns记录example.com而后者则有一个指向ip地址的a记录.如此一来,若服务器ip地址改变,则只需修改example.com的a记录即可.cname记录必须指向另一个域名,而不能是ip地址./">www.example.com都指向DNS记录example.com而后者则有一个指向IP地址的A记录。如此一来，若服务器IP地址改变，则只需修改example.com的A记录即可。CNAME记录必须指向另一个域名，而不能是IP地址。</a><br> <a target="_blank" rel="noopener" href="https://imgtu.com/i/5jGrb6"><img src="https://z3.ax1x.com/2021/10/29/5jGrb6.png" alt="5jGrb6.png"></a> </p>
 </blockquote>
 
@@ -927,7 +933,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">7.9k</span>
+                        class="white-color">8.1k</span>
             
             
             
