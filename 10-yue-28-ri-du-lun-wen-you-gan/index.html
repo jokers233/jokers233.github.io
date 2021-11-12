@@ -452,21 +452,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-05
+                    2021-11-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    10 分
                 </div>
                 
 
@@ -555,6 +555,21 @@
 <h2 id="CNAME介绍（RFC2317）"><a href="#CNAME介绍（RFC2317）" class="headerlink" title="CNAME介绍（RFC2317）"></a>CNAME介绍（RFC2317）</h2><blockquote>
 <p>真实名称记录(Canonical Name Record),是域名系统（DNS）的一种记录。CNAME记录用于将一个域名（同名）映射到另一个域名（真实名称），域名解析服务器遇到CNAME记录会以映射到的目标重新开始查询。这对于需要在同一个IP地址上运行多个服务的情况来说非常方便。若要同时运行文件传输服务和Web服务 则可以把ftp.example.com和<a target="_blank" rel="noopener" href="http://www.example.com都指向dns记录example.com而后者则有一个指向ip地址的a记录.如此一来,若服务器ip地址改变,则只需修改example.com的a记录即可.cname记录必须指向另一个域名,而不能是ip地址./">www.example.com都指向DNS记录example.com而后者则有一个指向IP地址的A记录。如此一来，若服务器IP地址改变，则只需修改example.com的A记录即可。CNAME记录必须指向另一个域名，而不能是IP地址。</a><br> <a target="_blank" rel="noopener" href="https://imgtu.com/i/5jGrb6"><img src="https://z3.ax1x.com/2021/10/29/5jGrb6.png" alt="5jGrb6.png"></a> </p>
 </blockquote>
+<h2 id="reversr-DNS补充"><a href="#reversr-DNS补充" class="headerlink" title="reversr DNS补充"></a>reversr DNS补充</h2><p> 对于一个域名,例如<a target="_blank" rel="noopener" href="http://www.huawei.com我们知道是com顶级域,那假如一个ip/">www.huawei.com我们知道是com顶级域，那假如一个IP</a> 117.78.61.19，是怎么判断是哪个顶级域呢？<br>反向解析也有一个顶级域是in-addr.arpa，对于IP  117.78.61.19实际对应的反向域名是19.61.78.117.in-addr.arpa，反向顶级域把117.in-addr.arpa这个A类授权给APNIC来管理，APNIC把78.117.in-addr.arpa这个B类授权给CNNIC来管理，CNNIC把下面的部分C类地址给华为云；</p>
+<p> 反向域名解析的大体过程：</p>
+<blockquote>
+<p>1.IP地址为a.b.c.d查询时先向in-addr.arpa.域查询a.in-addr.arpa.域返回一个ns地址，中国一般是apnic的dns</p>
+</blockquote>
+<blockquote>
+<p>2.再向apnic的dns查询b.a.in-addr.arpa.域返回一个ns地址，一般是isp的dns</p>
+</blockquote>
+<blockquote>
+<p>3.再向isp的dns查询c.b.a.in-addr.arpa.域返回一个ns地址，一般还是isp的dns或者授权后的dns</p>
+</blockquote>
+<blockquote>
+<p>4.最后向这个dns查询d.c.b.a.in-addr.arpa.即c.b.a.in-addr.arpa.域中的记录d返回一个对应的地址</p>
+</blockquote>
+<p>如图:<br><a target="_blank" rel="noopener" href="https://imgtu.com/i/IDFBa8"><img src="https://z3.ax1x.com/2021/11/12/IDFBa8.png" alt="IDFBa8.png"></a></p>
 
                 
             </div>
@@ -933,7 +948,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">8.1k</span>
+                        class="white-color">8.4k</span>
             
             
             
