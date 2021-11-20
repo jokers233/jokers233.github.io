@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-22
+                    2021-11-20
                 </div>
                 
 
@@ -508,6 +508,7 @@
 <ul>
 <li>注：ICMP报文需要计算校验和是由于：IP数据报计算的校验和只针对IP数据报首部有效，并不能确保数据部分一定进行无差错传输，类似地，TCP和UDP也需要自行计算校验和以确保数据部分的无差错传输。</li>
 </ul>
+<h2 id="给张图更加清晰地认识icmp"><a href="#给张图更加清晰地认识icmp" class="headerlink" title="给张图更加清晰地认识icmp"></a><strong>给张图更加清晰地认识icmp</strong></h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ILKm6A"><img src="https://z3.ax1x.com/2021/11/20/ILKm6A.jpg" alt="ILKm6A.jpg"></a></p>
 <h3 id="2-3报文分类"><a href="#2-3报文分类" class="headerlink" title="2.3报文分类"></a>2.3报文分类</h3><p>ICMP报文主要分为两大类 - 差错报告报文和网络控制报文：差错报告报文由于责任重大，规定其数据区必须包括发生差错的IP数据报首部以及数据区的至少64比特，因为这些信息更够为源端采取差错处理措施提供依据。</p>
 <p>网络控制报文又可分为两类 - 请求/应答报文和通知报文：其中请求/应答报文总是成对出现的，一个负责请求，一个负责应答，而通知报文顾名思义，则只负责建立一种单向的通知机制。</p>
 <p>ICMP报文种类繁多，协议设计者按照层次将其划分为type和code两层结构，其中type字段表明ICMP报文的类型，code字段则提供了有关报文类型更为详细的信息，下面是不同type值所代表的意义：<br><img src="https://i.loli.net/2021/09/18/ihaJeBzLCmKwRO3.jpg" alt="ICMP报文类型.jpg"></p>
